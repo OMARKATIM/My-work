@@ -1,0 +1,195 @@
+Workshop c                               OMAR KATIM
+ :Step 1
+  
+ Ecrivez un programme en C qui va te permettre d'afficher vos informations   personnelles : Nom, prenom , Age , Sex et numero de telephone  Les données sont saisies à partir du clavier
+V1
+ 
+ <include <stdio.h#
+ <include <stdlib.h#
+ 
+ 
+ ()int main
+ }
+ ;[char name[10],prenom[20], sex[20    
+ ; int  age , num    
+ ;(" printf("enter you name :\n    
+ ;(scanf("%s", &name    
+ ;(": printf("enter you prenom    
+ ;(scanf("%s", &prenom    
+ ;(": printf("enter your age    
+ ;(scanf("%d",&age    
+ ;(": printf("enter your num     ;(scanf("%ld",&num    
+ printf("your name is: %s \n\tyour prenom is: %s \n\tyour age is: %d \n\tyour num is: %ld \n     ;(", name, prenom, age, num
+ ;(printf("your prenom is: %s \n ",prenom*/    
+ ;(printf("your age is:  %d \n ",age    
+ /*;(printf("your num is: %ld", num    
+ ;return 0        
+ { 
+ 
+ 
+ : #2
+ a et b sont deux entiers saisies au clavier, calculez et affichez a+b, a-b,  a*b, a/b, a%b en
+ .format décimal, et en soignant l’interface homme/machine
+ (a/b donne le quotient de la division, a%b donne le reste de la division)
+V1
+ 
+ <include <stdio.h#
+ <include <stdlib.h#
+ 
+ 
+ ()int main
+ }
+ ; int a , b    
+ ;("printf("enter a    
+ ;(scanf("%d", &a    
+ ;("printf("enter b    
+ ;(scanf("%d",&b    
+ ;(printf("a + b = %d \n",a+b    
+ ;(printf("a x b = %d \n",a*b    
+ ;(printf("a - b = %d \n",a-b    
+ ;(printf("a / b = %.2f \n",(float)a/b    
+ 
+ ;return 0        
+ { 
+ 
+ 
+ : #3
+ Ecrivez un programme en C qui déclare la variable constante pi et la variable
+ .r
+ Déclarez trois variables D, P et S calculez respectivement les valeurs du
+ .diamètre, du périmètre et de la surface d’un cercle dont le rayon est r
+ On affichera à l’écran le contenu de ces différentes variables selon le  : format suivant
+ .Un cercle de rayon r a pour diamètre D, pour périmetre P et pour surface S
+ NB : Le rayon est une entrée du programme (entrer au clavier par  .(l’utilisateur
+V1
+ <include <stdio.h#  <include <stdlib.h#  define pi 3.14#
+ 
+ 
+ ( float diametre (float r  
+ 
+ }
+ ; return r*2    
+ 
+ {
+ (float permetre (float r 
+ 
+ }
+ ;return pi*r*2    
+ 
+ {
+ (float surface (float r 
+ } 
+ ;return  r*r*pi   
+ { 
+ ()int main 
+ } 
+ ; float r     
+ ;(" printf("entre la valurs de rayon     
+ ;(scanf("%f",&r     
+ ;((printf ("la diametre et %.2f ",diametre(r     
+ ;((printf ("la perimetre et %.2f ",permetre(r     
+ ;((printf ("la surface et %.2f ",surface(r     
+ 
+ 
+ ;return 0     
+ { 
+ 
+ 
+ 
+ 
+#include <stdio.h> 
+#include <stdlib.h> 
+#define pi 3.14 
+ 
+  
+Step 2: 
+#1​ : 
+Pour une gestion du mémoire il est recommandé de creer des constantes sous forme d'expression (Macros),  ce qui est demandé est de creer une constante qui te permet de vérifier si un nombre est superieure à un autre le resultat du retour soit 0 soit 1 ,pour formater le resultat de retour créez un constante qui permet d'afficher si 0 
+= False si 1 = true 
+Macro : MAX(a,b) 
+Nota bene : il faut creer votre premier type boolean afin de permettre la bonne marche du programme 
+ 
+ 
+#include <stdio.h> 
+#include <conio.h> 
+ 
+int bool = 0 ; int main () 
+  {     int a ,b ;     printf("enter la valour de a :");     scanf("%d",&a);     printf("enter la valour de b :");     scanf("%d",&b);     if (a>b)         bool = 1 ; 
+    else if (a<b)        bool = 0 ;     if (bool = 1)         printf("true");     else if (bool = 0)         printf("fols"); 
+ 
+ 
+} 
+ 
+ 
+
+#2​ : 
+ 
+ 
+Creez votre calculatrice conditionnée :  
+Ecrivez un programme qui permettra d'entrer deux nombres aux claviers et les afficher avec leur taille en Octet et en Hexadecimal. 
+Maintenant Controller les signes : + , - , * , / , % comme char. * si le signe est + on va faire l'addition des deux nombres   si le signe est - on va faire la soustraction etc ... 
+  
+pour le cas de la division vérifiez si la valeur du diviseur est différente de 0    si oui faire la division sinon afficher erreur 
+  
+Affichez le resultat à l'écran. 
+Créez votre arbre de décision 
+ 
+Refaite le meme exercice en utilisant `switch Case` 
+ 
+ 
+ 
+#include <stdio.h> 
+#include <conio.h> 
+ 
+ 
+ int main () 
+ {      char letter ;      float num1, num2 ;      printf("what operation do you want to do?\n\tA)Addition\n\tB)subtraction\n\tC)multiplication\n\tD)divistion\n");      scanf("%c",&letter); 
+     printf("please enter a number:");      scanf("%f",&num1);      printf("please enter a second number:");      scanf("%f",&num2); 
+     if (letter == 'A'|| letter == 'a')         printf("the sum of %.2f and %.2f is %.2f" , num1, num2, num1 + num2);      else if (letter =='B' || letter == 'b')         printf("the sub of %.2F and %.2f is %.2f  ", num1, num2, num1 - num2);      else if (letter == 'C'|| letter == 'c')         printf("the multi  of %.2F and %.2f is %.2f  ", num1, num2, num1 * num2);      else if (letter =='D' || letter == 'd') 
+        printf("the div  of %.2F and %.2f is %.2f  ", num1, num2, num1 / num2);         else             printf("you entered an onvalid character"); 
+ 
+     return 0; 
+ } 
+ 
+ 
+ 
+2- solutions  
+ 
+ 
+#include <stdio.h> 
+#include <conio.h> 
+ 
+void main () 
+  {         int a , x ,y,z ;        do 
+    { 
+ 
+ 
+printf("menu\n\t1-Addition\n\t2-Subtraction\n\t3-Maltiplication\n\t4-Divistion\n\t5-Exit\n\tEnter your choice");            scanf("%d",&a);          switch(a) 
+{     case 1 : 
+       printf("Enter calcule of x and y ");        scanf("%d %d",&x,&y);        z=x+y;        printf("%d",z);        break;     case 2: 
+        printf("Enter calcule of x and y ");        scanf("%d %d",&x,&y);        z=x-y; 
+       printf("%d",z);        break ;     case 3: 
+        printf("Enter calcule of x and y ");        scanf("%d %d",&x,&y);        z=x*y;        printf("%d",z);        break;     case 4: 
+        printf("Enter calcule of x and y");        scanf("%d %d",&x,&y);        z=x/y;        printf("%d",z);        break;     case 5:         printf("nice day");         break;     default : 
+        printf("wrong option"); 
+} 
+printf("\ndo you want to continew 1 for yas 2 for no\n"); scanf("%d",a); 
+    } 
+while (a==1); 
+}  
+#3​ : 
+Ecrivez une fonction en C qui permet de résoudre une équation du deuxieme degrés ax² + bx + c = 0  les coefficients a,b et c sont saisi à partir du clavier  
+ 
+Hint :  
+Delta = b²-(4*a*c), basez vous cette formule pour trouver les solutions 
+ 
+ 
+#include <stdio.h> 
+#include <stdlib.h> #include <math.h> int main() 
+{     float a,b,c,delta,x,x1,x2 ;        printf("Entrez les valeurs de a, b et c : ");        scanf("%f %f %f",&a,&b,&c);        delta = pow(b,2)-(4*a*c); 
+    if (delta < 0)        printf("pas de solutions reelles");     else if (delta == 0){         x = (-b)/(2*a); 
+        printf("la solution est : %.2f",x); 
+        }     else { 
+        x1 = (-b-sqrt(delta))/(2*a);         x2 = (-b+sqrt(delta))/(2*a); 
+        printf("les solutions sont : %.2 et %.2",x1,x2); 
+         } 
